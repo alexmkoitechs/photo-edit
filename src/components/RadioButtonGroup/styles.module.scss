@@ -1,0 +1,12 @@
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.option {
+  margin-right: 10px;
+}
+
+.selected {
+  margin-top: 20px;
+}

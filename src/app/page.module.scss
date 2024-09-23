@@ -1,0 +1,32 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  font-family: var(--font-geist-sans);
+  height: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 32px;
+    padding-bottom: 80px;
+  }
+
+  .main {
+    align-items: center;
+  }
+}
+
+.content {
+  display: flex;
+  height: calc(100% - 110px);
+  width: 100%;
+}
