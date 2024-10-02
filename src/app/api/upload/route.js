@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 import { getSortedImagesList } from '../../../helpers';
 
 const getFilesFromUploads = () => {
-  const directoryPath = path.join(__dirname, "../../../../../public/uploads/");
+  const directoryPath = path.resolve('public/uploads/');
   const files = fs.readdirSync(directoryPath);
 
   return files;
