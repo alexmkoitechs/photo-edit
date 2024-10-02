@@ -3,8 +3,9 @@ import path from 'path';
 import { NextResponse } from 'next/server';
 import { getSortedImagesList } from '../../../helpers';
 
+const directoryPath = path.resolve('public/uploads/');
+
 const getFilesFromUploads = () => {
-  const directoryPath = path.resolve('public/uploads/');
   const files = fs.readdirSync(directoryPath);
 
   return files;
@@ -34,7 +35,7 @@ export async function POST(req) {
       // need this for don't get lastIndex from files any loop
       lastIndex = fileNumber 
 
-      fs.writeFileSync(`public/uploads/${fileName}`, buffer);
+      fs.writeFileSync(`${directoryPath}/${fileName}`, buffer);
     }
   }
   
